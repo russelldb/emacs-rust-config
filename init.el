@@ -20,11 +20,12 @@
               ("C-c C-c s" . lsp-rust-analyzer-status)
               ("C-c C-c e" . lsp-rust-analyzer-expand-macro)
 	      ("C-c C-c t" . lsp-rust-analyzer-open-cargo-toml)
+	      ("C-c C-c w" . lsp-ui-flycheck-list)
               ("C-c C-c d" . dap-hydra)
               ("C-c C-c h" . lsp-ui-doc-glance))
   :config
   ;; uncomment for less flashiness
-  ;;(setq lsp-eldoc-hook nil)
+  (setq lsp-eldoc-hook nil)
   ;;(setq lsp-enable-symbol-highlighting nil)
   ;;(setq lsp-signature-auto-activate nil)
 
