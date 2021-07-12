@@ -127,3 +127,7 @@
 (global-hl-line-mode +1)
 (require 'display-line-numbers)
 (global-display-line-numbers-mode)
+(shackle-mode)
+(treemacs)
+(setq shackle-default-rule '(:same t))
+(desktop-save-mode t)
