@@ -130,4 +130,3 @@
 (shackle-mode)
 (treemacs)
 (setq shackle-default-rule '(:same t))
-(desktop-save-mode t)
