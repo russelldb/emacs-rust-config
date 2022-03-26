@@ -24,7 +24,10 @@
      	      ("C-c C-c o" . lsp-ui-find-workspace-symbol)
        	      ("C-c C-c i" . helm-imenu)
               ("C-c C-c d" . dap-hydra)
-              ("C-c C-c h" . lsp-ui-doc-glance))
+              ("C-c C-c h" . lsp-ui-doc-glance)
+	      ("C-c C-c p" . lsp-ui-doc-show)
+	      ("C-c C-c q" . lsp-ui-doc-hide)
+	      )
   :config
   ;; uncomment for less flashiness
   (setq lsp-eldoc-hook nil)
@@ -51,9 +54,9 @@
   :commands lsp
   :custom
   ;; what to use when checking on-save. "check" is default, I prefer clippy
-  (lsp-rust-analyzer-cargo-watch-command "clippy")
+  (lsp-rust-analyzer-cargo-watch-command "check")
   (lsp-eldoc-render-all nil)
-  (lsp-idle-delay 1)
+  (lsp-idle-delay 0.5)
   (lsp-rust-analyzer-server-display-inlay-hints t)
   :config
   (add-hook 'lsp-mode-hook 'lsp-ui-mode)
@@ -66,7 +69,8 @@
   :custom
   (lsp-ui-peek-always-show t)
   (lsp-ui-sideline-show-hover nil)
-  (lsp-ui-doc-enable nil))
+  (lsp-ui-doc-enable t)
+  (lsp-ui-doc-show-with-cursor t))
 
 
 ;; -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-

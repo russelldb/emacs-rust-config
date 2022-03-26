@@ -42,7 +42,7 @@
       ring-bell-function 'ignore)
 
 (tool-bar-mode 0)
-(menu-bar-mode 0)
+(menu-bar-mode 1)
 (when (fboundp 'scroll-bar-mode)
   (scroll-bar-mode 0))
 
@@ -128,5 +128,6 @@
 (require 'display-line-numbers)
 (global-display-line-numbers-mode)
 (shackle-mode)
-(treemacs)
 (setq shackle-default-rule '(:same t))
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
