@@ -59,9 +59,10 @@
   (set-face-attribute 'default nil :font "DejaVu Sans Mono-10")))
 
 (load-file (expand-file-name "init.el" user-emacs-directory))
+(load-file (expand-file-name "ligature.el" user-emacs-directory))
 
 (use-package ligature
-  :load-path "/Users/russell/dev/rdb/ligature.el"
+  :load-path "/Users/russell/.emacs.d/ligature.el"
   :config
   ;; Enable the "www" ligature in every possible major mode
   (ligature-set-ligatures 't '("www"))
@@ -85,7 +86,8 @@
   ;; Enables ligature checks globally in all buffers. You can also do it
   ;; per mode with `ligature-mode'.
   (global-ligature-mode t))
-(global-set-key "\C-s" 'swiper)
+
+(global-set-key "C-s" 'swiper)
 
 ;;; multiple cursors
 (require 'multiple-cursors)
